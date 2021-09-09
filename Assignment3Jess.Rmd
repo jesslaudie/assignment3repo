@@ -1,0 +1,10 @@
+---
+title: "Assignment3Jess"
+author: "Ruth Efrem"
+date: "9/8/2021"
+output: html_document
+---
+```{r}
+read.csv("C:/Users/Owner/OneDrive/Desktop/DS-3001/data/cereal.csv") 
+```
+
