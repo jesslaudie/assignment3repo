@@ -6,7 +6,7 @@ output: html_document
 ---
 ```{r}
 library(tidyverse)
-cereal <- read_csv("~/Desktop/DS3001/DS-3001/data/beaches.csv")
+cereal <- read_csv("~/Desktop/DS3001/DS-3001/data/cereal.csv")
 ```
 ```{r}
 ggplot(cereal, aes(x = fiber)) + geom_boxplot() + theme_bw()
