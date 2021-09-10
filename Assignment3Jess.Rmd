@@ -6,9 +6,12 @@ output: html_document
 ---
 ```{r}
 library(tidyverse)
-cereal <- read_csv("~/Desktop/DS3001/DS-3001/data/cereal.csv")
+cereal <- read_csv("~/R/DS-3001/data/cereal.csv")
+cereal$calories <- as.factor(cereal$calories)
 ```
 ```{r}
-ggplot(cereal, aes(x = fiber)) + geom_boxplot() + theme_bw()
+x1 <- group_by(cereal,calories)
+x2 <- summarize(x1, count=n())
+ggplot(cereal)+geom_histogram(aes(x = calories),stat = "count", fill = "#ADD8E6") + ggtitle("Calorie distribution of various cereals")+ theme(panel.background = element_blank())
 ```
 
